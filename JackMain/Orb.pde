@@ -40,16 +40,18 @@ class Orb {
     return 0;
   }
   
-  public void click() {
+  public boolean click() {
     if (
       mouseX > pos_x - orb_size &&
       mouseX < pos_x + orb_size && 
       mouseY > pos_y - orb_size &&
       mouseY < pos_y + orb_size
     ) {
-        clicked = true;
+       clicked = true;
+       return true;
     } else {
        clicked = false; 
+       return false;
     }
   }
 }
